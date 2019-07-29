@@ -21,9 +21,11 @@ WebUI.click(findTestObject('Object Repository/LogIn RP/Page_LibraryBeta/a_person
 
 WebUI.setText(findTestObject('Object Repository/LogIn RP/Page_LibraryBeta/input_Username_username'), 'admin')
 
-WebUI.setText(findTestObject('Page_LibraryBeta/input_Password_password'), 'test')
+WebUI.setEncryptedText(findTestObject('LogIn RP/Page_LibraryBeta/input_Password_password'), 'P9ET2sDE0SE=')
 
 WebUI.click(findTestObject('Object Repository/LogIn RP/Page_LibraryBeta/span_Log in'))
+
+WebUI.verifyElementPresent(findTestObject('LogIn RP/Page_LibraryBeta/span_person_outline Logout'), 0)
 
 WebUI.closeBrowser()
 
